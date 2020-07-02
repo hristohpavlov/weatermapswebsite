@@ -1,4 +1,4 @@
-# Weather Maps - CM2104 Group Project Repository
+# Weather Maps
 *Weather Maps is a platform that provides weather data ahead of time for specific cities along a specified journey.*
 
 # Running Weather Maps Locally
