@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+        <%- include('includes/head', { Page: 'Details' }); %>
+        <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+
+        <link rel="stylesheet" type="text/css" href="main.style.css" />
+        <link rel="stylesheet" type="text/css" href="footer.style.css" />
+        <script type="text/javascript" src="main.script.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#datetimepicker1").datetimepicker();
+
+                let query = <%- query %>;
+                $('#start').val(query.start);
+                $('#waypoints').val(query.waypoints);
+                $('#destination').val(query.destination);
+                $('#datetimepicker1').val(query.travelDate);
+
+                $("#openMenuButton").on("click", (e) => $("#myForm").show());
+                $("#closeMenuButton").on("click", (e) => $("#myForm").hide());
+                $(".modal-link").on("click", (e) => openModalLink(e));
+            });
+        </script>
+    </head>
+
+    <body>
+        <%- include('includes/navbar', { User: locals.User }); %>
+        <main>
+            <div class="content">
+                <button class="open-button" id="openMenuButton">Menu</button>
+                <div class="form-popup form" id="myForm">
+                    <div class="form-container signupForm" name="signupform">
+                        <p id='errors' class="errors2"></p>
+                        <input id="start" class="inputFields" type="text" placeholder="Departing From" required />
+                        <input id="waypoints" class="inputFields" type="text" placeholder="Scheduled Stops(City,City)" />
+                        <input id="destination" class="inputFields" type="text" placeholder="Arrival to" required />
+                        <input id="datetimepicker1" class="inputFields" placeholder="Departure Date" required />
+                        <div class="form_group">
+                            <input class="btn btn-primary" type='submit' value="Submit" onclick="getResults();" />
+                            <input class="btn btn-default" type='button' value="Close" id='closeMenuButton' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('includes/map'); %>
+        </main>
+        <%- include('includes/footer'); %>
+        <!-- Modal -->
+        <div class="modal fade" id="aModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

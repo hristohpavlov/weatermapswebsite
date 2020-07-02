@@ -1,0 +1,278 @@
+@import 'includes/_colors';
+
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 2rem 0rem;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 400px;
+
+    .modal-content {
+      padding: 1rem;
+    }
+  }
+}
+
+.padding-text {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.image-style {
+  z-index: 1;
+}
+
+//Footer and Form
+.form {
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 4%;
+  left: 0.5%;
+  width: auto;
+  text-align: center;
+  display: flex;
+  color: $white-color;
+  box-shadow: 3px 10px 20px 5px $box-shadow;
+  z-index: 9999;
+}
+
+.info {
+  width: auto;
+  background: $primary-color-transparent;
+  padding: 30px 0;
+  border-right: 5px solid $shadow-color;
+
+  h2 {
+    padding-top: 30px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.signupForm {
+  width: auto;
+  padding-top: 3rem !important;
+  padding: 1rem;
+  background: $background-bottom-color;
+  transition: .2s;
+  margin-block-end: 0rem !important;
+
+  h2 {
+    font-weight: 300;
+    padding-bottom: 5rem;
+  }
+}
+
+.inputFields {
+  position: relative;
+  display: block;
+  margin: 19px 0;
+  font-size: 16px;
+  padding: 5px;
+  width: 250px;
+  border: 1px solid $accent-color;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: $background-transparent-color;
+  color: $white-color;
+  outline: none;
+}
+
+#search-btn {
+  border: 1px solid $accent-color;
+  background: $background-transparent-color;
+  font-size: 18px;
+  color: white;
+  margin-top: 2rem;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+
+  &:hover {
+    background: $background-transparent-color-darker;
+  }
+}
+
+//Form launch button
+
+.open-button {
+  background-color: $white-color;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 69;
+  left: 2.2%;
+  width: 100px;
+  z-index: 5;
+  box-shadow: 1px 1px 5px 0px $box-shadow;
+}
+
+.form-container .btn {
+  color: white;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  z-index: 9;
+}
+.fix-center{
+    position: relative;
+ 	top: -50%;
+}
+.modal-title-style{
+   font-weight:900 !important;
+   font-size: 30px;
+}
+.weatherp{
+    font-weight: 800 !important;
+    font-size: 30px;
+    padding-top: 1.5rem;
+}
+.icon-style{
+    position:relative;
+    text-align: center;
+    margin-top: -0.2rem;
+}
+.left{
+    float:left;
+}
+.paragrapherror{
+    color:red;
+    margin-left: 3rem;
+    text-align: start;
+}
+.paragraphalert{
+    color:green;
+    margin-left: 4rem;
+    text-align: start;
+}
+.checkboxstyle{
+    text-align: start !important;
+    margin-bottom: 0.5rem;
+}
+.dropfields{
+    margin: -0.5rem 2rem;
+    width: 10rem;
+}
+.regerror{
+    color:red;
+    text-align: start;
+}
+.regalert{
+    color:green;
+    text-align: start;
+}
+.mapstyle{
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    margin-top: 0.6rem;
+}
+.styleFix {
+    color: inherit;
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%; 
+    text-align: start;
+}
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+.errors2{
+    color:red;
+    max-width:250px;
+}
+//Media Queries
+
+@media only (max-width: 250px) {
+	.open-button{
+ 		left:3.1%;
+	}
+}
+
+@media only (min-width: 250px) {
+	.open-button{
+ 		left:16%;
+	}
+}
+
+@media only (min-width: 450px) {
+	.open-button{
+ 		left:6.5%;
+	}
+}
+
+@media only (min-width: 650px) {
+	.open-button{
+ 		left:4.9%;
+	}
+}
+
+@media only (min-width: 850px) {
+	.open-button{
+ 		left:3.8%;
+	}
+}
+
+@media only (min-width: 1050px) {
+	.open-button{
+ 		left:3.2%;
+	}
+}
+
+@media only (min-width: 1250px) {
+	.open-button{
+		left:2.8%;
+	}
+}
+
+@media only (min-width: 1450px) {
+	.open-button{
+ 		left:2.6%;
+	}
+}
+
+@media only (min-width: 1650px) {
+	.open-button{
+ 		left:2.3%;
+	}
+}
+
+@media only (min-width: 1850px) {
+	.open-button{
+ 		left: 2.2%;
+	}
+}

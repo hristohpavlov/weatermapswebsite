@@ -1,0 +1,92 @@
+<html lang="en">
+    <head>
+        <%- include('includes/head', { Page: 'Home' }); %>
+
+        <link rel="stylesheet" type="text/css" href="index.style.css" />
+        <script type="text/javascript" src="index.script.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#datetimepicker1").datetimepicker();
+                $(".modal-link").on("click", (e) => openModalLink(e));
+            });
+        </script>
+    </head>
+
+    <body>
+        <%- include('includes/navbar', { User: locals.User }); %>
+        <main>
+            <div id="clouds">
+                <div class="cloud sky1"></div>
+                <div class="cloud sky2"></div>
+                <div class="cloud sky3"></div>
+                <div class="cloud sky4"></div>
+                <div class="cloud sky5"></div>
+                <div class="cloud sky6"></div>
+                <div class="cloud sky7"></div>
+                <div class="cloud sky8"></div>
+                <div class="cloud sky9"></div>
+                <div class="cloud sky10"></div>
+            </div>
+            <div class="parallax">
+                <div class="parallax_layer parallax_layer_0">
+                    <img src="layer-0.webp" />
+                </div>
+                <div class="parallax_layer parallax_layer_1">
+                    <img src="layer-1.webp" />
+                </div>
+                <div class="parallax_layer parallax_layer_2">
+                    <img src="layer-2.webp" />
+                </div>
+                <div class="parallax_layer parallax_layer_3">
+                    <img src="layer-3.webp" />
+                </div>
+                <div class="parallax_layer parallax_layer_4">
+                    <img src="layer-4.webp" />
+                </div>
+                <div class="parallax_layer parallax_layer_5">
+                    <img src="layer-5.webp" />
+                </div>
+                <div class="parallax_layer parallax_layer_6">
+                    <img src="layer-6.webp" />
+                </div>
+                <div class="parallax_cover">
+                    <div class="stars"></div>
+                    <div class="stars2"></div>
+                    <div class="stars3"></div>
+                    <div class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="content">
+                        <div class="form">
+                            <div class="signupForm" name="signupform">
+                                <img id="logo-medium" src="logo-form.webp" />
+                                <input id="departure" class="inputFields" type="text" placeholder="Departing From" required />
+                                <input id="waypoints" class="inputFields" type="text" placeholder="Scheduled Stops ( City,City ) " />
+                                <input id="arrival" class="inputFields" type="text" placeholder="Arrival to" required />
+                                <input id="datetimepicker1" class="inputFields" placeholder="Departure Date" required />
+                                <div class="form_group">
+                                    <input class="btn btn-primary" id="search-btn" type='submit' value="Search"
+                                        onclick="goToDetails();" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <%- include('includes/footer'); %>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Modal -->
+        <div class="modal fade" id="aModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

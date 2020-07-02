@@ -1,0 +1,84 @@
+@import 'includes/_colors';
+
+.navbar {
+  padding: 0.7rem;
+  background-color: $transparent-color;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+  display: block;
+}
+
+.navbar .Button {
+  position: relative;
+  color: $white-color;
+  background-color: $dark-primary-color;
+  border: 0px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  margin: 1px 0px 0px 1rem;
+}
+
+.Button:hover {
+  background-color: $accent-color;
+}
+
+.menuIcon {
+  color: $dark-primary-color;
+}
+
+.navbar-brand img {
+  margin-left: -.5rem;
+}
+
+.details-navbar {
+  background-color: $accent-color;
+  padding-left: 0.7rem;
+  padding-top: 0.05rem;
+  padding-bottom: 0rem;
+  padding-right: 0rem;
+}
+
+.navbar-btn-details .button {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  margin-left: 1rem;
+}
+
+.fix {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .details-navbar {
+    padding-left: 0.7rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0rem;
+  }
+    .navbar .button{
+        margin-left: 0;
+        margin-top: 2rem;
+        
+    }
+    .navbar-toggler{
+        margin-right: 1rem;
+    }
+}

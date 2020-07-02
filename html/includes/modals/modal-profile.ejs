@@ -1,0 +1,96 @@
+    <script>
+        $(document).ready(() => {
+            $('#newpassword').hide();
+            $('#newpassword2').hide();
+
+                 $('#email').val("<%- locals.User ? User.email : '' %>");
+
+            $('#changepassword').change(function () {
+                if ($(this).is(":checked")) {
+                    $('#newpassword').show();
+                    $('#newpassword2').show();
+                } else {
+                    $('#newpassword').hide();
+                    $('#newpassword2').hide();
+                }
+            });
+        });
+    </script>
+    <!--Modal cascading tabs-->
+    <div class="modal-c-tabs">
+        <!-- Nav tabs -->
+        <div class="modal-header border-bottom-0">
+            <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#profile" role="tab">
+                        Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#searches" role="tab">
+                        Your Searches</a>
+                </li>
+            </ul>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <!-- Tab panels -->
+        <div class="tab-content">
+            <!-- Profile Tab -->
+            <div class="tab-pane fade in show active" id="profile" role="tabpanel">
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Update Profile</h4>
+                    </div>
+                    <form action="javascript:void(0);" onsubmit="updateProfile()"
+                        class="d-flex flex-column text-center">
+                        <p id='update-profile-errors' class="paragrapherror"></p>
+                        <div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="Change your e-mail address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="currentpassword"
+                                    placeholder="Current Password" required>
+                            </div>
+                            <div class="form-group checkboxstyle">
+                                <input type="checkbox" id="changepassword">
+                                <label for="changepassword" class="check-box">
+                                    <div class="signup-section dropfields">Change
+                                        Password</div>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="newpassword" placeholder="New Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="newpassword2"
+                                    placeholder="Confirm New Password">
+                            </div>
+                            <div class="form-group">
+                                <input type='submit' class="btn btn-info btn-block btn-round" value='Update' />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Saved Searches Tab -->
+            <div class="tab-pane fade" id="searches" role="tabpanel">
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Your Searches</h4>
+                        <br/>
+                        <div id="searches">
+                            <% if (locals.User) { %> 
+                                <% for(var i=0; i < User.searchHistory.length; i++) { %>
+                                    <%- include('../searchHistoryPanel', { 'searchHistoryEntry': User.searchHistory[i], 'index': i }); %>
+                                    <br/>
+                                <% } %>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

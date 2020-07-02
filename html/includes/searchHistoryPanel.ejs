@@ -1,0 +1,16 @@
+ <div id="accordion<%- index %>">
+  <div class="card">
+        <div class="card-header">
+            <a class="colpsible-panel collapsed styleFix" data-toggle="collapse" data-parent="#accordion<%- index %>" href="#collapse<%- index %>">
+                <%- searchHistoryEntry.route.length > 2 ? searchHistoryEntry.route.slice(0,2).map(value => value.t)+'...' : searchHistoryEntry.route.map(value => value.t) %>
+            </a>
+        </div>
+
+    <div id="collapse<%- index %>" class="panel-collapse collapse">
+      <div class="card-body">
+        Route: <%- searchHistoryEntry.route.map(value => value.t) %>
+        Journey Start: <%- searchHistoryEntry.startTime %>
+      </div>
+    </div>
+  </div>
+ </div>

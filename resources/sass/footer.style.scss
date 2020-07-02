@@ -1,0 +1,248 @@
+@import 'includes/_colors';
+
+//Footer
+
+* {
+    font-family: 'Noto Sans KR', sans-serif !important;
+    font-weight: bold !important;
+}
+
+footer {
+    background-color: $background-bottom-color;
+    padding: 2rem;
+    padding-top: 0.5rem;
+    color: $footer-highlight-color;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+hr.light {
+    border-top: 3px solid $footer-highlight-color;
+    width: 70%;
+    // margin-top: .8rem;
+    // margin-bottom: 1rem;
+    position: relative;
+    left: 15%;
+}
+
+hr.light-100 {
+    border-top: 4px solid $primary-color;
+    width: 95%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    left: 3%;
+}
+
+footer a {
+    color: $footer-highlight-color;
+}
+
+.padding-connect {
+    padding-bottom: 1rem;
+}
+
+.container-fluid h6 {
+    padding-top: -2rem;
+}
+
+footer h5 {
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    margin-top: -1rem;
+}
+
+h6 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+}
+
+.col-12 {
+    margin-bottom: -31px;
+    padding-bottom: 0;
+    margin-top: 20px;
+}
+
+.container-fluid {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.1em !important;
+}
+
+.col-md-4 {
+    margin-top: -1rem;
+}
+
+.padding-top {
+    padding-top: 4rem;
+}
+
+footer p {
+    margin-top: 1rem;
+}
+
+.details-footer {
+    background-color: $accent-color !important;
+    color: $background-bottom-color !important;
+
+    hr.light {
+        border-top: 3px solid $background-bottom-color;
+        margin-left: 0.1rem;
+    }
+
+    hr.light-100 {
+        border-top: 4px solid $background-bottom-color;
+        margin-left: -2.5rem;
+        width: 100%;
+    }
+
+    img {
+        content: url('logo-navbar-2.webp');
+    }
+
+    @media only (min-width: 50px) {
+        hr.light {
+            width: 60%;
+            left: 19%;
+        }
+
+        hr.light-100 {
+            width: 140%;
+            left: 8%;
+        }
+    }
+
+    @media only (min-width: 250px) {
+        hr.light {
+            width: 60%;
+            left: 19%;
+        }
+
+        hr.light-100 {
+            width: 100%;
+            left: 12%;
+        }
+    }
+
+    @media only (min-width: 450px) {
+        hr.light {
+            width: 60%;
+            left: 19%;
+        }
+
+        hr.light-100 {
+            width: 100%;
+            left: 8%;
+        }
+    }
+
+    @media only (min-width: 650px) {
+        hr.light {
+            width: 60%;
+            left: 19%;
+        }
+
+        hr.light-100 {
+            width: 100%;
+            left: 7%;
+        }
+    }
+
+    @media only (min-width: 768px) {
+        hr.light {
+            width: 60%;
+            left: 20%;
+        }
+
+        hr.light-100 {
+            width: 100%;
+            left: 3%;
+        }
+    }
+}
+
+@media only (min-width: 50px) {
+    hr.light {
+        width: 60%;
+        left: 19%;
+    }
+}
+
+@media only (min-width: 250px) {
+    hr.light {
+        width: 60%;
+        left: 19%;
+    }
+}
+
+@media only (min-width: 450px) {
+    hr.light {
+        width: 60%;
+        left: 19%;
+    }
+}
+
+@media only (min-width: 650px) {
+    hr.light {
+        width: 60%;
+        left: 19%;
+    }
+}
+
+@media only (min-width: 768px) {
+    hr.light {
+        width: 60%;
+        left: 20%;
+    }
+}
+
+//Firefox Media Queries to fix footer
+
+@-moz-document url-prefix() {
+    @media only (min-width: 768px) {
+        footer {
+            height: 280px !important;
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+    @media only (max-width: 766px) {
+        footer {
+            height: 570px !important;
+        }
+    }
+}
+
+//Edge Media Queries to fix 
+
+@supports (-ms-ime-align:auto) {
+    @media only (min-width: 768px) {
+        footer {
+            height: 280px !important;
+        }
+
+        hr.light-100 {
+            left: 0.1% !important;
+        }
+
+        hr.light {
+            left: 0.1% !important;
+        }
+    }
+}
+
+@supports (-ms-ime-align:auto) {
+    @media only (max-width: 766px) {
+        footer {
+            height: 570px !important;
+        }
+
+        hr.light-100 {
+            left: 0.1% !important;
+        }
+
+        hr.light {
+            left: 0.1% !important;
+        }
+    }
+}

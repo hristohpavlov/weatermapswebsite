@@ -1,0 +1,31 @@
+    <script>
+        $(".modal-link").on("click", (e) => openModalLink(e));
+    </script>
+    <div class="modal-header border-bottom-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="form-title text-center">
+            <h4>Login</h4>
+        </div>
+        <form action="javascript:void(0);" onsubmit="login()" class="d-flex flex-column text-center">
+            <p id='login-errors' class="paragrapherror"></p>
+            <div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email1" name="email" placeholder="Email address"
+                        required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password1" name="password"
+                        placeholder="Password" required>
+                </div>
+                <input type='submit' class="btn btn-info btn-block btn-round" value='Login' />
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer d-flex justify-content-center">
+        <div class="signup-section">Forgot your password? <a href="/account/forgot-password" method='GET' class="text-info modal-link">Reset it</a>.</div>
+        <div class="signup-section">Not a member yet? <a href="/account/register" method='GET' class="text-info modal-link"> Sign Up</a>.</div>
+    </div>

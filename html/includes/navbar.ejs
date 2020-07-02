@@ -1,0 +1,43 @@
+<script>
+    $(function () {
+        if ('<%- pageUrl %>' == 'details') {
+            $('.navbar').addClass('details-navbar');
+            $('.navbar').addClass('navbar-btn-details');
+        }
+        $('#<%- pageUrl %>').addClass('active'); // Set active page based on router passed value.
+    })
+</script>
+
+<header>
+    <nav id="navbarsticky" class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img id="logo-navbar" src="logo-navbar.webp">
+                <text> </text>
+            </a>
+            <button class="navbar-toggler fix-position" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="menuIcon">
+                    <a class="fas fa-bars fa-1x"></a>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li id="index" class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+                <% if (locals.User == null) { %>
+                <a href="/account/login" method='GET' class='Button modal-link'>Login</a>
+                <a href="/account/register" method='GET' class='Button modal-link'>Register</a>
+                <% } else { %>
+                <i id='Welcome'>Hello, <a id='User-Name' href="/account/profile" method='GET' class='modal-link'
+                        data-toggle="modal" data-target="#aModal"> <%- User.email %> </a>!</i>
+                <form class="fix" action='account/logout' method='POST'>
+                    <input class='Button' type="submit" value="Logout" />
+                </form>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+</header>

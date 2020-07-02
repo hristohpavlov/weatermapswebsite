@@ -1,0 +1,20 @@
+    <div class="modal-header">
+        <div class="padding-text text-center">
+            <h5 class="modal-title modal-title-style" id="exampleModalLabel"><%- Weather.city %></h5>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="left">
+            <img class="fix-center" id="logo-weather" src="/weather-icons/<%- Weather.icon %>.webp" /> 
+            <p class="icon-style"><%- Weather.icon ? Weather.icon.split('-').join(' ').replace(/^\w/, c => c.toUpperCase()) : '' %></p>
+            
+        </div>
+        <div class="d-flex flex-column text-center">
+            <p class="weatherp"><%- Math.round(Weather.temp) %>&#176; C</p>
+            <p >Humidity: <%- Math.round(Weather.humidity*100) %>%</p>
+            <p ><%- Weather.timeOfArrival %></p>
+        </div>
+    </div>

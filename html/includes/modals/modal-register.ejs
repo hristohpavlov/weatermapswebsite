@@ -1,0 +1,31 @@
+    <div class="modal-header border-bottom-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="form-title text-center">
+            <h4>Register</h4>
+        </div>
+        <div class="d-flex flex-column text-center">
+            <p id='register-errors' class="regerror"></p>
+            <p id='register-alert' class="regalert"></p>
+            <form id='register-form' action="javascript:void(0);" onsubmit="register()">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email1" placeholder="E-mail Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password1" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password2" placeholder="Confirm Password" required>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <input type="checkbox" id="tos">
+                        <label for="tos" class="check-box"></label>
+                        <div class="signup-section"><a href="#a" class="text-info">Terms & Conditions</a></div>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-info btn-block btn-round" value="Register" />
+            </form>
+        </div>
+    </div>
