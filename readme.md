@@ -5,7 +5,7 @@
 
 1. Clone the repo:
 	```
-	git clone 
+	git clone https://github.com/hristohpavlov/weatermapswebsite.git
 	```
 
 2. Download the dependencies:
